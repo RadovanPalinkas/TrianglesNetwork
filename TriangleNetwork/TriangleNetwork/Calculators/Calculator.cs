@@ -36,10 +36,10 @@ namespace TriangleNetwork.Calculators
             //**E**
             for (int round = 0; round < 2; round++)
             {
-                for (int column = 0; column < FieldSize.ColumnsCaunt - 1; column++)
+                for (int column = 0; column < FieldSize.ColumnsCount - 1; column++)
                 {
                     //**D**
-                    for (int row = 0; row < FieldSize.RowsCaunt - 1; row++)
+                    for (int row = 0; row < FieldSize.RowsCount - 1; row++)
                     {
                         ITriangle triangle = iTriangle.CreateTriangle();
 

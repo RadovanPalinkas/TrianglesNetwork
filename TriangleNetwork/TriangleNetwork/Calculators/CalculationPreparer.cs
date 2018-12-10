@@ -23,7 +23,7 @@ namespace TriangleNetwork.Calculators
         {                       
             //**A**
             ListColumns = new List<IColumns>();         
-            for (int i = 0; i < FieldSize.ColumnsCaunt; i++)
+            for (int i = 0; i < FieldSize.ColumnsCount; i++)
             {
                 ListColumns.Add(iColumns.CreateColumn());
             }
@@ -32,9 +32,9 @@ namespace TriangleNetwork.Calculators
             int Row = 0;
             foreach (Columns columns in ListColumns)
             {
-                columns.Column = pointsByX.GetRange(Row, FieldSize.RowsCaunt);
+                columns.Column = pointsByX.GetRange(Row, FieldSize.RowsCount);
                 columns.Column = columns.Column.OrderByDescending(p => p.Y).ToList();
-                Row += FieldSize.RowsCaunt;
+                Row += FieldSize.RowsCount;
             }
 
             return ListColumns;
